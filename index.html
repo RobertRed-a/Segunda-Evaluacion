@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Donde Reciclar Plástico en Santiago</title>
+
+    <!--
+    color aquí 
+    los metadatos 
+    que puedan generar 
+    con https://megatags.co/
+    -->
+    <!-- COMMON TAGS -->
+    <meta charset="utf-8">
+    <title>Donde Reciclar Plástico en Santiago</title>
+    <!-- Search Engine -->
+    <meta name="description" content="Un chileno promedio produce 1,08 kilo de basura al día. De eso 11% es plástico, entre envases de líquidos y comidas, bolsas y hasta el tetra pack.">
+    <meta name="image" content="https://banner2.kisspng.com/20180203/yjq/kisspng-recycling-symbol-paper-recycle-5a754ded75c0a1.0168292115176371014823.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Donde Reciclar Plastico en Santiago">
+    <meta itemprop="description" content="Un chileno promedio produce 1,08 kilo de basura al día. De eso 11% es plástico, entre envases de líquidos y comidas, bolsas y hasta el tetra pack.">
+    <meta itemprop="image" content="https://banner2.kisspng.com/20180203/yjq/kisspng-recycling-symbol-paper-recycle-5a754ded75c0a1.0168292115176371014823.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Donde Reciclar Plastico en Santiago">
+    <meta name="og:description" content="Un chileno promedio produce 1,08 kilo de basura al día. De eso 11% es plástico, entre envases de líquidos y comidas, bolsas y hasta el tetra pack.">
+    <meta name="og:image" content="https://gcdn.emol.cl/medio-ambiente/files/2015/05/imag0107.jpg">
+    <meta name="og:site_name" content="Donde Reciclar Plastico en Santiago">
+    <meta name="og:type" content="website">
+    
+    <!-- Vamos a buscar el CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Vamos a buscar el CSS de Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Vamos por nuestro CSS, basado en https://startbootstrap.com/template-overviews/grayscale/ -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Aquí vamos por el estilo y script del mapa-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="titular"></span></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#dataviz">Visualizaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Este encabezado viene de https://startbootstrap.com/snippets/video-header/ -->
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <!--Favor revisar https://www.w3schools.com/html/html5_video.asp-->
+            <source src="media/videoplayback.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex text-center h-100">
+                <div class="my-auto w-100 text-white">
+                    <h1 class="display-3">Donde Reciclar Plástico en Santiago</h1>
+                    <h2>En Chile, se estima que hasta el 12% de la basura que bota cada persona proviene del plástico.</h2>
+                    <p class="pt-3"><a href="#about"><i class="fas fa-3x fa-arrow-alt-circle-down"></i></a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">Hasta 25 mil toneladas de plásticos anuales se arrojan al mar desde Chile </h2>
+                    <p class="text-white-50">Un chileno promedio produce 1,08 kilo de basura al día. De eso 11% es plástico, entre envases de líquidos y comidas, bolsas y hasta tetra pack. En Chile, cada año se producen más de 17 millones de toneladas de residuos sólidos y el material reciclado apenas alcanza un 10 por ciento.
+                        <br /><cite><a href="https://www.latercera.com/noticia/hasta-25-mil-toneladas-de-plasticos-anuales-se-arrojan-al-mar-desde-chile/">“Entradas de residuos de plástico de la tierra al océano”, U. de Georgia (2017)</a></cite></p>
+                </div>
+            </div>
+            <img src="media/ipad.png" class="img-fluid" alt="">
+        </div>
+    </section>
+
+    <!-- dataviz Section -->
+    <section id="dataviz" class="dataviz-section bg-light">
+        <div class="container">
+
+            <!-- MAPA -->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-7">
+                    <div id="leaflet"></div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>Puntos Limpios donde Reciclar Plástico en la Región Metropolitana</h4>
+                        <p class="text-black-50 mb-0">Al año entre 10 mil y 25 mil toneladas de ese desecho plástico son mal manejadas en Chile y tienen el potencial de terminar en el mar. Llegan desde la acuicultura, usuarios de playas y desde el interior, transportadas al mar a través de los ríos, y en el mundo sumaron entre 4,8 y 12,7 millones de toneladas en 2010.
+                            Los <b>Puntos Limpios</b> son lugares donde se reciben y almacenan los residuos reciclables. En estos se realiza la compactación y enfardado de fracciones de residuos. Puedes encontrar <a href="http://www.santiagorecicla.cl/donde-reciclar/">aquí</a> más información.
+                        </p>
+                        <p class="text-black-50 mb-0"> 
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRIMER GRÁFICO -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6">
+                    <svg id="chart-1"></svg>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Vertederos Ilegales en la Región Metropolitana </h4>
+                                <p class="mb-0 text-white-50">Riberas de ríos, caleteras de autopistas y predios eriazos cerca de poblaciones son los lugares que concentran los mayores vertederos ilegales de Santiago. Se trata de alrededor de <b>400 hectáreas</b> de la ciudad donde se lanzan escombros, muebles, electrodomésticos y también líquidos tóxicos por parte de empresas o particulares, que deciden no pagar el precio de acudir a un relleno sanitario que cumple con normas ambientales.</p>
+                                 <p class="mb-0 text-white-50">Los vertederos clandestinos son considerados como fuertes focos de infección y contaminación. Hasta la fecha las autoridades han logrado identificar <b>73 vertederos ilegales</b> de residuos sólidos en la región Metropolitana, correspondientes a 400 hectáreas y unos 600 microbasurales.
+                                </p>
+                                <hr class="d-none d-lg-block mb-0 ml-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEGUNDO GRÁFICO -->
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6">
+                    <svg id="chart-2"></svg>
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Chile lidera generación de basura per cápita en Sudamérica.</h4>
+                                <p class="mb-0 text-white-50"> Según el organismo <a href="http://www.atlas.d-waste.com/">“The Waste Atlas”</a>, Chile queda por delante de países de la región como Brasil (383 kilos), Uruguay (376), Panamá (343) y Argentina (341). Además nos presenta las ciudades chilenas con mayor basura generada por año y por persona, estas son Arica (616,9 kilos), Iquique (613,2) y Puerto Montt (445,3), seguidas por Coyhaique (423,4) y Santiago (412).
+
+                                </p>
+                                <hr class="d-none d-lg-block mb-0 mr-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+        <div class="container">
+            <p><span class="titular"></span> fue desarrollado por Roberto Aliro Rojas para Multimedia II</p>
+            <p>Segundo semestre, 2018 · Diseño Gráfico</p>
+            <p>Universidad de Chile</p>
+            <p><a href="#page-top"><i class="fas fa-arrow-alt-circle-up"></i></a></p>
+        </div>
+    </footer>
+
+    <!-- Vamos a buscar algo de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!--ahora aprovechamos que Bootstrap necesita jQuery, para manipular el DOM-->
+    <script>
+        (function($) {
+            "use strict"; // Start of use strict
+
+            $(".titular").text("Donde Reciclar Plástico en Santiago");
+        })(jQuery); // End of use strict
+    </script>
+
+    <!--el tema de bootstrap que usamos necesita este script para funcionar-->
+    <script src="js/theme.js"></script>
+
+    <!--acá comienzan las visualizaciones-->
+
+    <!--primero el mapa-->
+
+    <script>
+        var mymap = L.map('leaflet').setView([ -33.4726900,  -70.6472400], 10);
+
+        var georeferencias = [
+        {
+            lugar: "Av.Republica 440",
+            coordenadas: [-33.4537726, -70.6691835]
+        }, {
+            lugar: "Américo Vespucio 3300",
+            coordenadas: [-33.47842, 70.5780689]
+        },  {
+            lugar: "Quilín 5473",
+            coordenadas: [-33.4909057, -70.5759289]
+        },  {
+            lugar: "Av.Republica 440",
+            coordenadas: [-33.4537726, -70.6691835]
+        },  {
+            lugar: "Av.Republica 440",
+            coordenadas: [-33.4537726, -70.6691835]
+        },  {
+            lugar: "Av.Republica 440",
+            coordenadas: [-33.4537726, -70.6691835]
+        },  {
+            lugar: "Av.Republica 440",
+            coordenadas: [-33.4537726, -70.6691835]
+        },  {
+            lugar: "Florencio Bahamondes esquina Pedro Montt",
+            coordenadas: [-33.4738838, -70.6900496]
+        }, {
+            lugar: "Balmaceda con R. Cumming",
+            coordenadas: [-33.4290984, -70.6694262]
+        }, {
+            lugar: "BioBio 835",
+            coordenadas: [-33.4744665, -70.6444145]
+        }, {
+            lugar: "Catedral esquina Libertad",
+            coordenadas: [-33.4397509, -70.6742801]
+        }, {
+            lugar: "Interior Parque Quinta Normal",
+            coordenadas: [-33.4410758, -70.6849703]
+        },{
+            lugar: "Av. Americo Vespucio Norte 3098",
+            coordenadas: [-33.3908006, -70.596457]
+        },{
+            lugar: "Av. Vicuña Mackenna 4860",
+            coordenadas: [-33.5309715, -70.6353453]
+        },{
+            lugar: "Cruchaga Montt con Huérfanos",
+            coordenadas: [-33.4436511, -70.6948307]
+        },{
+            lugar: "Av. Las Torres 111",
+            coordenadas: [-33.3635407, -70.7190232]
+        },{
+            lugar: "Av. Manuel Antonio Matta 581",
+            coordenadas: [-33.4575609, -70.6409251]
+        },{
+            lugar: "San José de Maipo 7712",
+            coordenadas: [-33.5977608,-70.5159785]
+        },{
+            lugar: "Av. Los Toros 05441",
+            coordenadas: [-33.5672901, -70.5581001]
+        },{
+            lugar: "Calle Juan de Dios Malebrán 1147",
+            coordenadas: [-33.6035135, -70.5878526]
+        },{
+            lugar: "Tocornal Grez 47",
+            coordenadas: [-33.6120157, -70.578331]
+        },{
+            lugar: "Pedro de Valdia Norte, Parque Metropolitano",
+            coordenadas: [-33.4154038, -70.617413]
+        },{
+            lugar: "Grecia 8735",
+            coordenadas: [-33.4764063, -70.5416367]
+        },{
+            lugar: "Av. Tobalaba 13651",
+            coordenadas: [-33.498152, -70.560379]
+        },{
+            lugar: "Los Cerezos 6130",
+            coordenadas: [-33.4993069, -70.5737865]
+        },{
+            lugar: "Av. Pdte. Eduardo Frei Montalva 3092",
+            coordenadas: [-33.3908006, -70.6845474]
+        },{
+            lugar: "Recoleta 4290",
+            coordenadas: [-33.3847568, -70.6432039]
+        },{
+            lugar: "Av. José Pedro Alessandri 6402",
+            coordenadas: [-33.465554, -70.5982984]
+        }, {
+            lugar: "Grajales 2849 esquina San Alfonso",
+            coordenadas: [-33.4539783, -70.6756914]
+        }
+        ];
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+
+        for (var x = 0; x < georeferencias.length; x++) {
+            lat = georeferencias[x].coordenadas[0];
+            lon = georeferencias[x].coordenadas[1];
+
+        L.marker([lat, lon]).addTo(mymap).bindPopup(georeferencias[x].lugar);
+
+            console.log(lat + "," + lon);
+        }
+    </script>
+
+    <!--luego voy a buscar una biblioteca que Data Driven Documents (DDD = d3)-->
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!--esto es para un gráfico -->
+
+    <script>
+
+        var ballenas = [
+        {especie:"Maipu", metros: 8 },
+        {especie:"El Monte", metros:1},
+        {especie:"Buin", metros:5},
+        {especie:"Santiago", metros:1},
+        {especie:"Curacaví", metros:1},
+        {especie:"Pudahuel", metros: 11 },
+        {especie:"Renca", metros:4},
+        {especie:"Quilicura", metros:9},
+        {especie:"Colina", metros:3},
+        {especie:"Lampa", metros:4},
+        {especie:"Talagante", metros:1},
+        {especie:"Quinta Normal", metros:1},
+        {especie:"Paine", metros:1},
+        {especie:"Puente Alto", metros:6},
+        {especie:"San Bernardo", metros:5},
+        {especie:"Padre Hurtado", metros:2},
+        {especie:"La Pintana", metros:4},
+        {especie:"Cerro Navia", metros:2},
+        {especie:"Peñaflor", metros:1},
+        {especie:"Alhue", metros:1},
+        {especie:"Cerrillos", metros:2}
+        ];
+       var coso = d3.select("#chart-1").attr("width", "100%").attr("height", "900").style("background", "rgb(112, 93, 5)");
+
+        coso.selectAll("rect").data(ballenas).enter().append("rect").attr("x",40).attr("y", function(d, i) { return (i + 1) * 40; }).attr("width", function(d) { return d.metros*10 }).attr("height",30).attr("fill","RGBA(220, 255, 255, 1.00)")
+
+         coso.selectAll("text").data(ballenas).enter().append("text").text(function(d) {return (d.especie + " (" + d.metros + " vertederos)")}).attr("text-anchor", "start").attr("x", function(d, i) { return (d.metros*10)+50 }).attr("y", function(d, i) { return ((i + 1) * 40)+20 }).attr("font-family", "sans-serif").attr("font-size", "12px").attr("fill", "white"); 
+
+    </script>
+
+    <!--esto es para otro gráfico -->
+
+    <script>
+      
+     var data = [
+      {pais: 'Perú (273k)', kilos: 273.8, color:"white" },
+      {pais: 'Bolivia(178k)', kilos: 178.9, color:"white"},
+      {pais: 'Chile (456k)', kilos: 456.3, color:"white", },
+     
+    ]    
+    var esto = d3.select("#chart-2").attr("width", "100%").attr("height", "600").style("background", "rgb(33, 87, 70)");
+    var g = esto.selectAll("g")
+      .data(data)
+      .enter()
+      .append("g")  
+    g.append("circle")
+      .attr("cx", function(d, i) { return (180 * (i++)+100); })
+      .attr("cy", function(d) { return 250; })
+      .attr("r", function(d) { return d.kilos* 0.100; })
+      .attr("fill",function(d){ return d.color; })
+    g.append("text")
+      .attr("x", function(d, i) { return (180 * (i++)+100); })
+      .attr("y", function(d, i) { return 400; })
+      .attr("fill","white")
+      .attr('text-anchor','middle')
+      .text(function(d) { return d.pais; })
+        
+    </script>
+
+</body>
+
+</html>
